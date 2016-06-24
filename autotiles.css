@@ -1,0 +1,57 @@
+﻿/*Theme 'greeny'*/
+.greeny > div > div {
+    border: 1px solid #f9aa0b;
+    background: #fabb3d;
+    box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.35), 0 3px 1px -1px rgba(0, 0, 0, 0.1);
+    color:white;
+}
+
+    .greeny > div > div span:last-child {
+        color: white;
+    }
+
+/*Defaul theme 'light'*/
+.light > div > div {
+    border: solid 1px #ccc;
+    box-shadow: inset 0px 0px 5px 0px #ccc;
+}
+
+    .light > div > div span:last-child {
+        color: #ccc;
+    }
+
+/*Theme 'Rose'*/
+.flower > div > div {
+    border: solid 1px #39afea;
+    box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.35), 0 3px 1px -1px rgba(0, 0, 0, 0.1);
+    background: #67c2ef;
+    color:white;
+}
+
+    .flower > div > div span:last-child {
+        color: white;
+    }
+
+.light input[type='text'], .greeny input[type='text'], .flower input[type='text'] {
+    margin-top: 7px;
+    margin-left: 3px;
+    border: none;
+    border-bottom: solid 1px #ccc;
+    width: 68px;
+    padding-left: 2px;
+    float: left;
+}
+
+.light > div > div, .greeny > div > div, .flower > div > div {
+    margin: 3px;
+    float: left;
+    padding: 2px 5px 2px;
+    border-radius: 2px;
+}
+
+    .light > div > div span:last-child, .greeny > div > div span:last-child, .flower > div > div span:last-child {
+        padding: 5px 0px 0px 5px;
+        font-size: 15px;
+        font-family: monospace;
+        cursor: pointer;
+    }
