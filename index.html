@@ -40,15 +40,59 @@
 
 <p>Download and include <a href="https://raw.githubusercontent.com/Manikandarajan-Jegadeshwaran/AutoTiles-UI-Control/master/autotiles.js">autotiles.js</a> and <a href="https://raw.githubusercontent.com/Manikandarajan-Jegadeshwaran/AutoTiles-UI-Control/master/autotiles.css">autotiles.css</a></p>
 
-<pre><code>&lt;script src="bower_components/autotiles.min.js"&gt;&lt;/script&gt;
-&lt;script src="bower_components/autotiles.css"&gt;&lt;/script&gt;
-</code></pre>
+<div class="highlight highlight-source-js"><pre>    <span class="pl-k">&lt;</span>script src<span class="pl-k">=</span><span class="pl-s"><span class="pl-pds">"</span>bower_components/autotiles.min.js<span class="pl-pds">"</span></span><span class="pl-k">&gt;&lt;</span><span class="pl-k">/</span>script<span class="pl-k">&gt;</span>
+    <span class="pl-k">&lt;</span>script src<span class="pl-k">=</span><span class="pl-s"><span class="pl-pds">"</span>bower_components/autotiles.css<span class="pl-pds">"</span></span><span class="pl-k">&gt;&lt;</span><span class="pl-k">/</span>script<span class="pl-k">&gt;</span></pre></div>
 
 <h2>
 <a id="usage" class="anchor" href="#usage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Usage</h2>
 
 <h3>
 <a id="design" class="anchor" href="#design" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Design</h3>
+
+<p>Here is the example, how to create div to setup entire plugin data.</p>
+
+<div class="highlight highlight-text-html-basic"><pre>    &lt;<span class="pl-ent">html</span>&gt;
+      &lt;<span class="pl-ent">body</span>&gt;
+          &lt;<span class="pl-ent">div</span> <span class="pl-e">id</span>=<span class="pl-s"><span class="pl-pds">'</span>divAuto<span class="pl-pds">'</span></span>&gt;
+      &lt;/<span class="pl-ent">body</span>&gt;
+    &lt;/<span class="pl-ent">html</span>&gt;</pre></div>
+
+<h3>
+<a id="invoke" class="anchor" href="#invoke" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Invoke</h3>
+
+<p>The default way of invoking plugin to initiate plugin functionality. Here <code>Option</code> is used to setup additional arguments and it can be detaily explained below.</p>
+
+<div class="highlight highlight-source-js"><pre>      <span class="pl-en">$</span>(<span class="pl-k">function</span> () {
+        <span class="pl-k">var</span> <span class="pl-c1">Option</span> <span class="pl-k">=</span> {
+            url<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>../pluginData.asmx/GetData<span class="pl-pds">'</span></span>  \\here I use webservice to fetch data
+        }
+        <span class="pl-en">$</span>(<span class="pl-s"><span class="pl-pds">'</span>#divAuto<span class="pl-pds">'</span></span>).<span class="pl-en">autotiles</span>(<span class="pl-c1">Option</span>);
+    });</pre></div>
+
+<h3>
+<a id="invoke-with-options" class="anchor" href="#invoke-with-options" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Invoke with options</h3>
+
+<p>The following are the complete options available for plugin to invoke.</p>
+
+<div class="highlight highlight-source-js"><pre>       <span class="pl-en">$</span>(<span class="pl-k">function</span> () {
+        <span class="pl-k">var</span> <span class="pl-c1">Option</span> <span class="pl-k">=</span> {
+            url<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>../pluginData.asmx/GetData<span class="pl-pds">'</span></span><span class="pl-c">//</span>
+             , arguments<span class="pl-k">:</span> { type<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>1<span class="pl-pds">'</span></span> }
+             , result<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>hdnResult<span class="pl-pds">'</span></span>
+             , theme<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>greeny<span class="pl-pds">'</span></span>
+             , validatekey<span class="pl-k">:</span> { key<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>ID<span class="pl-pds">'</span></span> }
+             , onloaditem<span class="pl-k">:</span> [{ <span class="pl-s"><span class="pl-pds">"</span>Name<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>Moving tortoise<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>ID<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-c1">88</span>, <span class="pl-s"><span class="pl-pds">"</span>Code<span class="pl-pds">"</span></span><span class="pl-k">:</span> <span class="pl-c1">88</span> }]
+             , <span class="pl-en">onselect</span><span class="pl-k">:</span> <span class="pl-k">function</span> (<span class="pl-smi">obj</span>) {
+                 <span class="pl-en">console</span>.<span class="pl-c1">log</span>(obj);
+             }
+        }
+        <span class="pl-en">$</span>(<span class="pl-s"><span class="pl-pds">'</span>#divAuto<span class="pl-pds">'</span></span>).<span class="pl-en">autotiles</span>(<span class="pl-c1">Option</span>);
+    });</pre></div>
+
+<h3>
+<a id="options" class="anchor" href="#options" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Options</h3>
+
+<p>All options below are used in <code>autotiles.js</code> so be sure to check it out if in doubt. All the  Options except <code>url</code> </p>
 
       <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/Manikandarajan-Jegadeshwaran/AutoTiles-UI-Control">Autotiles-ui-control</a> is maintained by <a href="https://github.com/Manikandarajan-Jegadeshwaran">Manikandarajan-Jegadeshwaran</a>.</span>
