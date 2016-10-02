@@ -63,10 +63,10 @@
 <p>The default way of invoking plugin to initiate plugin functionality. Here <code>Option</code> is used to setup additional arguments and it can be detaily explained below.</p>
 
 <div class="highlight highlight-source-js"><pre>      <span class="pl-en">$</span>(<span class="pl-k">function</span> () {
-        <span class="pl-k">var</span> <span class="pl-c1">Option</span> <span class="pl-k">=</span> {
-            url<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>../pluginData.asmx/GetData<span class="pl-pds">'</span></span>  \\here I use webservice to fetch data
+        <span class="pl-k">var</span> Option <span class="pl-k">=</span> {
+            url<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>../pluginData.asmx/GetData<span class="pl-pds">'</span></span>  \\here <span class="pl-c1">I</span> use webservice to fetch data
         }
-        <span class="pl-en">$</span>(<span class="pl-s"><span class="pl-pds">'</span>#divAuto<span class="pl-pds">'</span></span>).<span class="pl-en">autotiles</span>(<span class="pl-c1">Option</span>);
+        <span class="pl-en">$</span>(<span class="pl-s"><span class="pl-pds">'</span>#divAuto<span class="pl-pds">'</span></span>).<span class="pl-en">autotiles</span>(Option);
     });</pre></div>
 
 <h3>
@@ -75,7 +75,7 @@
 <p>The following are the complete options available for plugin to invoke.</p>
 
 <div class="highlight highlight-source-js"><pre>       <span class="pl-en">$</span>(<span class="pl-k">function</span> () {
-        <span class="pl-k">var</span> <span class="pl-c1">Option</span> <span class="pl-k">=</span> {
+        <span class="pl-k">var</span> Option <span class="pl-k">=</span> {
             url<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>../pluginData.asmx/GetData<span class="pl-pds">'</span></span><span class="pl-c">//</span>
              , arguments<span class="pl-k">:</span> { type<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>1<span class="pl-pds">'</span></span> }
              , result<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>hdnResult<span class="pl-pds">'</span></span>
@@ -86,7 +86,7 @@
                  <span class="pl-en">console</span>.<span class="pl-c1">log</span>(obj);
              }
         }
-        <span class="pl-en">$</span>(<span class="pl-s"><span class="pl-pds">'</span>#divAuto<span class="pl-pds">'</span></span>).<span class="pl-en">autotiles</span>(<span class="pl-c1">Option</span>);
+        <span class="pl-en">$</span>(<span class="pl-s"><span class="pl-pds">'</span>#divAuto<span class="pl-pds">'</span></span>).<span class="pl-en">autotiles</span>(Option);
     });</pre></div>
 
 <h3>
