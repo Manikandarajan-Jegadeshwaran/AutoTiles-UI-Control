@@ -1,4 +1,4 @@
-# AutoTiles-UI-Control - Plugin for new UI control
+# [AutoTiles-UI-Control - Plugin for new UI control](https://manikandarajan-jegadeshwaran.github.io/AutoTiles-UI-Control/)
 Here the plugin Autotiles-ui-control is a new user interface that can be used to handle the multiple binding of data with highly responsive tiles pattern.
 
 ## **Generate new UI control with autotiles**
